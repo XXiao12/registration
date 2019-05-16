@@ -1,0 +1,31 @@
+use conference;
+drop table registrants;
+drop table studenttype;
+drop table choice;
+drop table sessioninfo;
+create table registrants (id char(50) not null, fname char(30), lname char(30), address char(50), type char(20), transp char(30), acc char(5), totalcost int, primary key(id));
+create table studenttype (tid char(50) not null, type char(20), primary key(tid));
+create table choice (cid char(50) not null, sid int not null, primary key(cid, sid));
+create table sessioninfo(id int not null, title char(70),  speaker char(30), location char(50), maxattend int, primary key(id));
+insert into sessioninfo values(1, "Women in Computing", "Wendy Powley", "Grant Hall, Queen's University", 300);
+insert into sessioninfo values(2, "Game Development", "Enny B", "Walter Light AUD, Queen's University", 300);
+insert into sessioninfo values(3, "Artificial Intelligence", "Wendy Z", "Chernoff  AUD, Queen's University", 300);
+insert into sessioninfo values(4, "HCI", "Phoebe L", "Stirling AUD A, Queen's University", 300);
+insert into sessioninfo values(5, "Uniy 3D", "Selena S", "Stirling AUD B, Queen's University", 300);
+insert into registrants values ("sam123@gmail.com", "Sam", "Smith", "123 lovely cir.", "Professional", "London", "no", 120);
+insert into registrants values ("wendy@queensu.ca", "Wendy", "Powley", "456 optical street","Professional", "Kingston", "no", 120);
+insert into registrants values ("alli123@gmail.com", "Alli", "Yeti", "789 illusion drive", "Student", "Ottawa", "no", 80);
+insert into registrants values ("bob321@queensu.ca", "Bob", "Cat", "1011 university ave.","Student", "Toronto", "yes", 160);
+insert into studenttype values ("alli123@gmail.com", "Undergraduate");
+insert into studenttype values ("bob321@queensu.ca", "Graduate");
+insert into choice values ("sam123@gmail.com", 1);
+insert into choice values ("sam123@gmail.com", 3);
+insert into choice values ("sam123@gmail.com", 5);
+insert into choice values ("wendy@queensu.ca", 1);
+insert into choice values ("alli123@gmail.com", 1);
+insert into choice values ("alli123@gmail.com", 2);
+insert into choice values ("alli123@gmail.com", 4);
+insert into choice values ("bob321@queensu.ca", 3);
+insert into choice values ("bob321@queensu.ca", 2);
+
+

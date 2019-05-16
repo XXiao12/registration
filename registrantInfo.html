@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Conference Registration - Database</title>
+	<link rel="stylesheet" type="text/css" href="register.css">
+</head>
+
+<body>
+	<h1>Canadian Celebration of Women in Computing event</h1>
+	<form action="registrantInfo.php" method="POST" enctype="multipart/form-data">
+		<div class="side">
+			<h3>Conference Database</h3>
+			<p><button type="reset" value="Reset">Reset</button></p>
+			<p><button class="go" type="submit" value="Submit">Go</button></p>
+		</div>
+		<div class="info">
+			<h4>Search Database for people by...</h4>
+			<p><input type="radio" name = "queryL">Transportation Location (Kingston / Toronto / London / Kitchener / Guelph / Ottawa)</p>
+			<p>	Enter location: <input type = "text" name = "searchL"></p>
+			<p><input type="radio" name = "queryAll">All Registrants</p>
+			<p><input type="radio" name = "queryTC">Total Cost of all Registrants</p>
+		</div>
+		<p></p>
+		<p></p>
+		<div class="info">
+		<h3>Session Information</h3>
+			<p><input type="radio" name = "queryS1">Session 1</p>
+			<p><input type="radio" name = "queryS2">Session 2</p>
+			<p><input type="radio" name = "queryS3">Session 3</p>
+			<p><input type="radio" name = "queryS4">Session 4</p>
+			<p><input type="radio" name = "queryS5">Session 5</p>
+		</div>
+	</form>
+</body>
+</html>

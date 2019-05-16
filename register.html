@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Conference Registration</title>
+	<link rel="stylesheet" type="text/css" href="register.css">
+</head>
+
+<body>
+	<h1>Canadian Celebration of Women in Computing event</h1>
+
+	<form action="submit.php" method="POST" enctype="multipart/form-data">
+	<div class="side">
+    	<h3>Conference Registration</h3>
+    	<p><button type="reset" value="Reset">Reset</button></p>
+		<p><button type="submit" value="Submit">Submit</button></p>
+		<p><button><a href="registrantInfo.html">Conference Database</a></button></p>
+  	</div>
+  	<div class="info">
+		<p>First Name: <input type = "text" name = "fname" required="required"></p>
+    	<p>Last Name: <input type = "text" name = "lname" required="required"></p>
+		<p>Address: <input type = "add" name = "address" placeholder="ex: 555 main street"></p>
+		<p>Email: <input type = "email" name = "email"></p>
+	
+		<p>Are you a Student or Professional? (Choose one)</p>
+    	<p>
+      	<input type="radio" name = "typeSP" value="Student">Student
+      	<input type="radio" name = "typeSP" value="Professional">Professional
+    	</p>
+    
+    	<p>If you are a Student, are you a graduate or undergraduate student?</p>
+    	<p>
+      	<input type="radio" name = "student" value = "Graduate">Graduate
+      	<input type="radio" name = "student" value = "Undergraduate">Undergraduate
+      	<input type="radio" name = "student" value = "High School">High School
+    	</p>
+		
+		<p>Select up to 3 Sessions (minimum 1 session):</p>
+    	<p>
+      	<input type="checkbox" name = "session1" value = "val1">Session 1
+      	<input type="checkbox" name = "session2" value = "val2">Session 2
+      	<input type="checkbox" name = "session3" value = "val3">Session 3
+      	<input type="checkbox" name = "session4" value = "val4">Session 4
+      	<input type="checkbox" name = "session5" value = "val5">Session 5
+    	</p>
+  	</div>
+
+  	<div id="transportation">
+    	<p>Transportation:
+    	<select name="transportation">
+      		<option> </option>
+      		<option>Kingston</option>
+      		<option>Toronto</option>
+      		<option>London</option>
+      		<option>Kitchener</option>
+      		<option>Guelph</option>
+      		<option>Ottawa</option>
+    	</select></p>
+    	<p>Request Accommodations:
+      	<input type="radio" name="request" value="yes">Yes
+      	<input type="radio" name="request" value="no">No
+    	</p>
+  	</div>
+
+  	<p id="upload">Upload an image (optional)
+    <input type="file" name = "photo"></p>
+	</form>
+</body>
+</html>
